@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-24T02:48:35.832Z",
+  "lastUpdated": "2026-01-24T03:22:12.169Z",
   "airport": {
     "code": "PVR",
     "name": "Gustavo Díaz Ordaz International Airport",
@@ -166,7 +166,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-23T21:20:00+00:00",
-      "estimated": null,
+      "estimated": "2026-01-23T21:48:00+00:00",
       "actual": null,
       "status": "Scheduled",
       "terminal": null,
@@ -721,9 +721,9 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-23T14:41:00+00:00",
-      "estimated": "2026-01-23T14:33:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "estimated": "2026-01-23T14:36:00+00:00",
+      "actual": "2026-01-23T14:35:00+00:00",
+      "status": "Landed",
       "terminal": null,
       "gate": null
     },
@@ -751,9 +751,9 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-23T16:07:00+00:00",
-      "estimated": "2026-01-23T16:45:00+00:00",
-      "actual": "2026-01-23T16:45:00+00:00",
-      "status": "Landed",
+      "estimated": null,
+      "actual": null,
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -1505,7 +1505,7 @@
       "scheduled": "2026-01-23T17:46:00+00:00",
       "estimated": "2026-01-23T17:46:00+00:00",
       "actual": "2026-01-23T18:15:00+00:00",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1985,7 +1985,7 @@
       "scheduled": "2026-01-23T17:10:00+00:00",
       "estimated": "2026-01-23T17:10:00+00:00",
       "actual": "2026-01-23T17:12:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "11"
     },
@@ -2000,7 +2000,7 @@
       "scheduled": "2026-01-23T17:10:00+00:00",
       "estimated": "2026-01-23T17:10:00+00:00",
       "actual": "2026-01-23T17:12:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "11"
     },
@@ -2015,7 +2015,7 @@
       "scheduled": "2026-01-23T17:10:00+00:00",
       "estimated": "2026-01-23T17:10:00+00:00",
       "actual": "2026-01-23T17:12:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "11"
     },
@@ -2224,8 +2224,8 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-23T16:30:00+00:00",
       "estimated": "2026-01-23T16:30:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "actual": "2026-01-23T17:50:00+00:00",
+      "status": "Landed",
       "terminal": null,
       "gate": "7"
     },
@@ -2239,8 +2239,8 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-23T16:30:00+00:00",
       "estimated": "2026-01-23T16:30:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "actual": "2026-01-23T17:50:00+00:00",
+      "status": "Landed",
       "terminal": null,
       "gate": "7"
     },
@@ -2254,8 +2254,8 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-23T16:30:00+00:00",
       "estimated": "2026-01-23T16:30:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "actual": "2026-01-23T17:50:00+00:00",
+      "status": "Landed",
       "terminal": null,
       "gate": "7"
     },
@@ -2269,8 +2269,8 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-23T16:30:00+00:00",
       "estimated": "2026-01-23T16:30:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "actual": "2026-01-23T17:50:00+00:00",
+      "status": "Landed",
       "terminal": null,
       "gate": "7"
     },
@@ -2284,8 +2284,8 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-23T16:30:00+00:00",
       "estimated": "2026-01-23T16:30:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "actual": "2026-01-23T17:50:00+00:00",
+      "status": "Landed",
       "terminal": null,
       "gate": "7"
     },
@@ -2299,8 +2299,8 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-23T16:22:00+00:00",
       "estimated": "2026-01-23T16:22:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "actual": "2026-01-23T18:24:00+00:00",
+      "status": "Scheduled",
       "terminal": null,
       "gate": "14"
     },
@@ -2465,7 +2465,7 @@
       "scheduled": "2026-01-23T15:53:00+00:00",
       "estimated": "2026-01-23T15:53:00+00:00",
       "actual": "2026-01-23T16:10:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "20"
     },
@@ -2480,7 +2480,7 @@
       "scheduled": "2026-01-23T15:53:00+00:00",
       "estimated": "2026-01-23T15:53:00+00:00",
       "actual": "2026-01-23T16:10:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "20"
     },
@@ -2495,7 +2495,7 @@
       "scheduled": "2026-01-23T15:53:00+00:00",
       "estimated": "2026-01-23T15:53:00+00:00",
       "actual": "2026-01-23T16:10:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "20"
     },
@@ -2510,7 +2510,7 @@
       "scheduled": "2026-01-23T15:53:00+00:00",
       "estimated": "2026-01-23T15:53:00+00:00",
       "actual": "2026-01-23T16:10:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "20"
     },
@@ -2524,8 +2524,8 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-23T15:48:00+00:00",
       "estimated": "2026-01-23T15:48:00+00:00",
-      "actual": null,
-      "status": "En Route",
+      "actual": "2026-01-23T16:42:00+00:00",
+      "status": "Landed",
       "terminal": null,
       "gate": "13"
     },
@@ -2660,7 +2660,7 @@
       "scheduled": "2026-01-23T15:30:00+00:00",
       "estimated": "2026-01-23T15:30:00+00:00",
       "actual": "2026-01-23T16:38:00+00:00",
-      "status": "Scheduled",
+      "status": "Landed",
       "terminal": null,
       "gate": "11"
     },
@@ -2690,7 +2690,7 @@
       "scheduled": "2026-01-23T15:20:00+00:00",
       "estimated": "2026-01-23T15:20:00+00:00",
       "actual": "2026-01-23T15:53:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": null
     },
@@ -2705,7 +2705,7 @@
       "scheduled": "2026-01-23T15:20:00+00:00",
       "estimated": "2026-01-23T15:20:00+00:00",
       "actual": "2026-01-23T15:26:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "12"
     },
@@ -2720,7 +2720,7 @@
       "scheduled": "2026-01-23T15:20:00+00:00",
       "estimated": "2026-01-23T15:20:00+00:00",
       "actual": "2026-01-23T15:26:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "12"
     },
@@ -2735,7 +2735,7 @@
       "scheduled": "2026-01-23T15:20:00+00:00",
       "estimated": "2026-01-23T15:20:00+00:00",
       "actual": "2026-01-23T15:26:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "12"
     },
@@ -2915,7 +2915,7 @@
       "scheduled": "2026-01-23T14:40:00+00:00",
       "estimated": "2026-01-23T14:40:00+00:00",
       "actual": "2026-01-23T15:02:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "8"
     },
@@ -2930,7 +2930,7 @@
       "scheduled": "2026-01-23T14:40:00+00:00",
       "estimated": "2026-01-23T14:40:00+00:00",
       "actual": "2026-01-23T15:02:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "8"
     },
@@ -2945,7 +2945,7 @@
       "scheduled": "2026-01-23T14:40:00+00:00",
       "estimated": "2026-01-23T14:40:00+00:00",
       "actual": "2026-01-23T15:02:00+00:00",
-      "status": "En Route",
+      "status": "Landed",
       "terminal": null,
       "gate": "8"
     }
