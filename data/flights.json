@@ -1,0 +1,193 @@
+{
+  "lastUpdated": "2026-01-23T06:05:00.000Z",
+  "airport": {
+    "code": "PVR",
+    "name": "Gustavo Díaz Ordaz International Airport",
+    "city": "Puerto Vallarta",
+    "timezone": "America/Mexico_City"
+  },
+  "arrivals": [
+    {
+      "flightNumber": "AA1256",
+      "airline": "American Airlines",
+      "airlineCode": "AA",
+      "origin": "Dallas/Fort Worth International",
+      "originCode": "DFW",
+      "scheduled": "2026-01-23T09:45:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "UA1782",
+      "airline": "United Airlines",
+      "airlineCode": "UA",
+      "origin": "Houston George Bush Intercontinental",
+      "originCode": "IAH",
+      "scheduled": "2026-01-23T10:30:00-06:00",
+      "status": "On Time"
+    },
+    {
+      "flightNumber": "WS2234",
+      "airline": "WestJet",
+      "airlineCode": "WS",
+      "origin": "Calgary International",
+      "originCode": "YYC",
+      "scheduled": "2026-01-23T11:15:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "AC1890",
+      "airline": "Air Canada",
+      "airlineCode": "AC",
+      "origin": "Toronto Pearson International",
+      "originCode": "YYZ",
+      "scheduled": "2026-01-23T12:20:00-06:00",
+      "status": "On Time"
+    },
+    {
+      "flightNumber": "Y4651",
+      "airline": "Volaris",
+      "airlineCode": "Y4",
+      "origin": "Mexico City International",
+      "originCode": "MEX",
+      "scheduled": "2026-01-23T13:00:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "DL478",
+      "airline": "Delta Air Lines",
+      "airlineCode": "DL",
+      "origin": "Los Angeles International",
+      "originCode": "LAX",
+      "scheduled": "2026-01-23T14:30:00-06:00",
+      "status": "Delayed"
+    },
+    {
+      "flightNumber": "AS1345",
+      "airline": "Alaska Airlines",
+      "airlineCode": "AS",
+      "origin": "Seattle-Tacoma International",
+      "originCode": "SEA",
+      "scheduled": "2026-01-23T15:45:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "SW3421",
+      "airline": "Southwest Airlines",
+      "airlineCode": "WN",
+      "origin": "Denver International",
+      "originCode": "DEN",
+      "scheduled": "2026-01-23T16:30:00-06:00",
+      "status": "On Time"
+    },
+    {
+      "flightNumber": "AM456",
+      "airline": "Aeromexico",
+      "airlineCode": "AM",
+      "origin": "Monterrey International",
+      "originCode": "MTY",
+      "scheduled": "2026-01-23T18:00:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "AA2187",
+      "airline": "American Airlines",
+      "airlineCode": "AA",
+      "origin": "Phoenix Sky Harbor",
+      "originCode": "PHX",
+      "scheduled": "2026-01-23T19:15:00-06:00",
+      "status": "Scheduled"
+    }
+  ],
+  "departures": [
+    {
+      "flightNumber": "AA1257",
+      "airline": "American Airlines",
+      "airlineCode": "AA",
+      "destination": "Dallas/Fort Worth International",
+      "destinationCode": "DFW",
+      "scheduled": "2026-01-23T10:45:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "UA1783",
+      "airline": "United Airlines",
+      "airlineCode": "UA",
+      "destination": "Houston George Bush Intercontinental",
+      "destinationCode": "IAH",
+      "scheduled": "2026-01-23T11:30:00-06:00",
+      "status": "On Time"
+    },
+    {
+      "flightNumber": "WS2235",
+      "airline": "WestJet",
+      "airlineCode": "WS",
+      "destination": "Calgary International",
+      "destinationCode": "YYC",
+      "scheduled": "2026-01-23T12:15:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "AC1891",
+      "airline": "Air Canada",
+      "airlineCode": "AC",
+      "destination": "Toronto Pearson International",
+      "destinationCode": "YYZ",
+      "scheduled": "2026-01-23T13:20:00-06:00",
+      "status": "On Time"
+    },
+    {
+      "flightNumber": "Y4652",
+      "airline": "Volaris",
+      "airlineCode": "Y4",
+      "destination": "Mexico City International",
+      "destinationCode": "MEX",
+      "scheduled": "2026-01-23T14:00:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "DL479",
+      "airline": "Delta Air Lines",
+      "airlineCode": "DL",
+      "destination": "Los Angeles International",
+      "destinationCode": "LAX",
+      "scheduled": "2026-01-23T15:30:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "AS1346",
+      "airline": "Alaska Airlines",
+      "airlineCode": "AS",
+      "destination": "Seattle-Tacoma International",
+      "destinationCode": "SEA",
+      "scheduled": "2026-01-23T16:45:00-06:00",
+      "status": "On Time"
+    },
+    {
+      "flightNumber": "SW3422",
+      "airline": "Southwest Airlines",
+      "airlineCode": "WN",
+      "destination": "Denver International",
+      "destinationCode": "DEN",
+      "scheduled": "2026-01-23T17:30:00-06:00",
+      "status": "Delayed"
+    },
+    {
+      "flightNumber": "AM457",
+      "airline": "Aeromexico",
+      "airlineCode": "AM",
+      "destination": "Guadalajara International",
+      "destinationCode": "GDL",
+      "scheduled": "2026-01-23T19:00:00-06:00",
+      "status": "Scheduled"
+    },
+    {
+      "flightNumber": "AA2188",
+      "airline": "American Airlines",
+      "airlineCode": "AA",
+      "destination": "Phoenix Sky Harbor",
+      "destinationCode": "PHX",
+      "scheduled": "2026-01-23T20:15:00-06:00",
+      "status": "Scheduled"
+    }
+  ]
+}

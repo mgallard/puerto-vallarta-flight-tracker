@@ -1,0 +1,417 @@
+/* Puerto Vallarta Flight Tracker - Compact White Theme */
+/* Colors from PuertoVallarta.net logo */
+
+:root {
+    /* Logo Colors */
+    --pvr-blue: #1565C0;
+    --pvr-blue-light: #42A5F5;
+    --pvr-orange: #F57C00;
+    --pvr-yellow: #FFD54F;
+    --pvr-green: #43A047;
+    --pvr-pink: #E91E63;
+    
+    /* Theme Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-header: #1565C0;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-muted: #adb5bd;
+    --border-color: #e9ecef;
+    
+    /* Status Colors */
+    --status-ontime: #43A047;
+    --status-delayed: #F57C00;
+    --status-cancelled: #dc3545;
+    --status-scheduled: #1565C0;
+    
+    /* Fonts */
+    --font-mono: 'Roboto Mono', monospace;
+    --font-sans: 'Roboto', -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.flight-board {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Header - Compact */
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--bg-header);
+    color: white;
+}
+
+.airport-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.airport-code {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pvr-yellow);
+    letter-spacing: 0.05em;
+}
+
+.airport-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.airport-name .city {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.airport-name .full-name {
+    font-size: 0.7rem;
+    opacity: 0.85;
+}
+
+.last-updated {
+    text-align: right;
+    font-size: 0.75rem;
+}
+
+.update-label {
+    opacity: 0.8;
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+#update-time {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+}
+
+/* Tab Navigation - Compact */
+.tab-navigation {
+    display: flex;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn:hover {
+    background: rgba(21, 101, 192, 0.05);
+    color: var(--pvr-blue);
+}
+
+.tab-btn.active {
+    background: var(--bg-primary);
+    color: var(--pvr-blue);
+    border-bottom-color: var(--pvr-orange);
+}
+
+.tab-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Flight Table - Compact */
+.flight-table-container {
+    background: var(--bg-primary);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.flight-table thead {
+    background: var(--bg-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.flight-table th {
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.flight-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.flight-table tbody tr:hover {
+    background: rgba(21, 101, 192, 0.03);
+}
+
+.flight-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Column widths */
+.col-time { width: 70px; }
+.col-flight { width: 80px; }
+.col-airline { width: 140px; }
+.col-city { min-width: 120px; }
+.col-status { width: 90px; }
+
+/* Time styling */
+.flight-time {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Flight number */
+.flight-number {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--pvr-blue);
+    font-size: 0.85rem;
+}
+
+/* Airline */
+.airline-name {
+    color: var(--text-primary);
+    font-size: 0.8rem;
+}
+
+/* City */
+.city-name {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.city-code {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    margin-left: 4px;
+    font-family: var(--font-mono);
+}
+
+/* Status badges - Compact */
+.status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.status-scheduled {
+    background: rgba(21, 101, 192, 0.1);
+    color: var(--status-scheduled);
+}
+
+.status-ontime,
+.status-landed,
+.status-departed {
+    background: rgba(67, 160, 71, 0.1);
+    color: var(--status-ontime);
+}
+
+.status-delayed {
+    background: rgba(245, 124, 0, 0.1);
+    color: var(--status-delayed);
+}
+
+.status-cancelled {
+    background: rgba(220, 53, 69, 0.1);
+    color: var(--status-cancelled);
+}
+
+.status-active,
+.status-en-route {
+    background: rgba(66, 165, 245, 0.1);
+    color: var(--pvr-blue-light);
+}
+
+/* Loading state */
+.loading-row td {
+    text-align: center;
+    padding: 40px 16px;
+    color: var(--text-secondary);
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-color);
+    border-top-color: var(--pvr-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Empty state */
+.empty-row td {
+    text-align: center;
+    padding: 40px 16px;
+    color: var(--text-muted);
+}
+
+.empty-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    opacity: 0.5;
+}
+
+/* Footer - Compact */
+.board-footer {
+    padding: 10px 16px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.disclaimer {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.powered-by {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+#flight-date {
+    color: var(--pvr-orange);
+    font-weight: 500;
+}
+
+/* Scrollbar styling */
+.flight-table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.flight-table-container::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.flight-table-container::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+.flight-table-container::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .board-header {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 10px 12px;
+    }
+    
+    .airport-info {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .airport-code {
+        font-size: 1.25rem;
+    }
+    
+    .airport-name .city {
+        font-size: 0.9rem;
+    }
+    
+    .last-updated {
+        text-align: center;
+    }
+    
+    .tab-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .tab-btn span {
+        display: none;
+    }
+    
+    .tab-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .flight-table th,
+    .flight-table td {
+        padding: 6px 8px;
+    }
+    
+    .col-airline {
+        display: none;
+    }
+    
+    .city-code {
+        display: none;
+    }
+    
+    .flight-table-container {
+        max-height: 350px;
+    }
+}

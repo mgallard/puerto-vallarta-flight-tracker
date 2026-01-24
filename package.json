@@ -1,0 +1,21 @@
+{
+  "name": "puerto-vallarta-flight-tracker",
+  "version": "1.0.0",
+  "description": "Daily flight arrivals and departures for Puerto Vallarta Airport (PVR)",
+  "main": "scripts/fetch-flights.js",
+  "scripts": {
+    "fetch": "node scripts/fetch-flights.js",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "puerto-vallarta",
+    "airport",
+    "flights",
+    "pvr"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}

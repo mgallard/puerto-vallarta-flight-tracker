@@ -1,0 +1,89 @@
+name: Update Flight Data
+
+# Runs daily at 00:05 Mexico City time (06:05 UTC)
+# Also allows manual triggering from GitHub Actions UI
+
+on:
+  schedule:
+    # 06:05 UTC = 00:05 Mexico City time (CST/UTC-6)
+    # In summer (CDT/UTC-5), this becomes 01:05 local time
+    - cron: '5 6 * * *'
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fetch-flights.js'
+
+jobs:
+  update-flights:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Fetch flight data
+        env:
+          AVIATIONSTACK_API_KEY: ${{ secrets.AVIATIONSTACK_API_KEY }}
+        run: npm run fetch
+      
+      - name: Check for changes
+        id: check-changes
+        run: |
+          git diff --quiet data/flights.json || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/flights.json
+          git commit -m "Update flight data for $(date -u +'%Y-%m-%d')"
+          git push
+
+  # Deploy to GitHub Pages after updating data
+  deploy:
+    needs: update-flights
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main  # Get the updated main branch with new data
+      
+      - name: Pull latest changes
+        run: git pull origin main
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
