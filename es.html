@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeropuerto de Puerto Vallarta - Información de Vuelos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flight-board">
+        <header class="board-header">
+            <div class="airport-info">
+                <div class="airport-code">PVR</div>
+                <div class="airport-name">
+                    <span class="city">Puerto Vallarta</span>
+                    <span class="full-name">Aeropuerto Internacional Gustavo Díaz Ordaz</span>
+                </div>
+            </div>
+            <div class="last-updated">
+                <span class="update-label">Última actualización:</span>
+                <span id="update-time">--</span>
+            </div>
+        </header>
+
+        <nav class="tab-navigation">
+            <button class="tab-btn active" data-tab="arrivals">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16v-2a4 4 0 0 0-4-4H4"/>
+                    <path d="M3 12l5-5"/>
+                    <path d="M3 12l5 5"/>
+                </svg>
+                <span>Llegadas</span>
+            </button>
+            <button class="tab-btn" data-tab="departures">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 8v2a4 4 0 0 0 4 4h13"/>
+                    <path d="M21 12l-5-5"/>
+                    <path d="M21 12l-5 5"/>
+                </svg>
+                <span>Salidas</span>
+            </button>
+        </nav>
+
+        <div class="flight-table-container">
+            <table class="flight-table">
+                <thead>
+                    <tr>
+                        <th class="col-time">Hora</th>
+                        <th class="col-flight">Vuelo</th>
+                        <th class="col-airline">Aerolínea</th>
+                        <th class="col-city" id="city-header">Origen</th>
+                        <th class="col-status">Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="flight-tbody">
+                    <tr class="loading-row">
+                        <td colspan="5">
+                            <div class="loading-spinner"></div>
+                            <span>Cargando información de vuelos...</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="board-footer">
+            <p class="disclaimer">
+                La información de vuelos se proporciona solo como referencia. Verifique el estado con su aerolínea antes de viajar.
+            </p>
+            <p class="powered-by">
+                Datos del <span id="flight-date">--</span> • Actualizado diariamente
+            </p>
+        </footer>
+    </div>
+
+    <script src="script-es.js"></script>
+</body>
+</html>
