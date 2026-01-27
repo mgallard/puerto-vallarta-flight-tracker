@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-27T18:48:01.611Z",
+  "lastUpdated": "2026-01-27T18:51:00.255Z",
   "airport": {
     "code": "PVR",
     "icao": "MMPR",
@@ -152,7 +152,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T17:38:00Z",
-      "estimated": "2026-01-27T20:11:00Z",
+      "estimated": "2026-01-27T20:09:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -233,6 +233,21 @@
       "gate": null
     },
     {
+      "flightNumber": "Y4280",
+      "airline": "VOI",
+      "airlineCode": "VOI",
+      "origin": "Lic. Benito Juarez Int'l",
+      "originCode": "MEX",
+      "destination": null,
+      "destinationCode": null,
+      "scheduled": "2026-01-27T18:08:00Z",
+      "estimated": "2026-01-27T18:50:23Z",
+      "actual": "2026-01-27T18:50:23Z",
+      "status": "Landed",
+      "terminal": null,
+      "gate": null
+    },
+    {
       "flightNumber": "UA2010",
       "airline": "UAL",
       "airlineCode": "UAL",
@@ -244,20 +259,6 @@
       "estimated": "2026-01-27T18:06:00Z",
       "actual": "2026-01-27T18:06:00Z",
       "status": "Landed",
-      "terminal": null,
-      "gate": null
-    },
-    {
-      "flightNumber": "Y4280",
-      "airline": "VOI",
-      "airlineCode": "VOI",
-      "origin": "Lic. Benito Juarez Int'l",
-      "originCode": "MEX",
-      "destination": null,
-      "destinationCode": null,
-      "scheduled": "2026-01-27T18:08:00Z",
-      "estimated": "2026-01-27T18:50:30Z",
-      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -315,7 +316,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T18:32:00Z",
-      "estimated": "2026-01-27T19:03:00Z",
+      "estimated": "2026-01-27T19:05:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -443,7 +444,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:28:00Z",
-      "estimated": "2026-01-27T20:11:00Z",
+      "estimated": "2026-01-27T20:09:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -499,7 +500,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:31:00Z",
-      "estimated": "2026-01-27T19:13:00Z",
+      "estimated": "2026-01-27T19:11:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -625,7 +626,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T20:20:00Z",
-      "estimated": "2026-01-28T01:00:00Z",
+      "estimated": "2026-01-28T01:01:00Z",
       "status": "Scheduled",
       "terminal": null,
       "gate": null
@@ -1876,20 +1877,6 @@
       "gate": null
     },
     {
-      "flightNumber": "WS2451",
-      "airline": "WJA",
-      "airlineCode": "WJA",
-      "origin": null,
-      "originCode": null,
-      "destination": "Winnipeg Int'l",
-      "destinationCode": "YWG",
-      "scheduled": "2026-01-27T23:20:00Z",
-      "estimated": "2026-01-27T23:20:00Z",
-      "status": "Scheduled",
-      "terminal": null,
-      "gate": null
-    },
-    {
       "flightNumber": "DL1779",
       "airline": "DAL",
       "airlineCode": "DAL",
@@ -1897,6 +1884,20 @@
       "originCode": null,
       "destination": "Los Angeles Intl",
       "destinationCode": "LAX",
+      "scheduled": "2026-01-27T23:20:00Z",
+      "estimated": "2026-01-27T23:20:00Z",
+      "status": "Scheduled",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "WS2451",
+      "airline": "WJA",
+      "airlineCode": "WJA",
+      "origin": null,
+      "originCode": null,
+      "destination": "Winnipeg Int'l",
+      "destinationCode": "YWG",
       "scheduled": "2026-01-27T23:20:00Z",
       "estimated": "2026-01-27T23:20:00Z",
       "status": "Scheduled",
@@ -1946,20 +1947,6 @@
       "gate": null
     },
     {
-      "flightNumber": "Y45615",
-      "airline": "VOI",
-      "airlineCode": "VOI",
-      "origin": null,
-      "originCode": null,
-      "destination": "General Mariano Escobedo Int'l",
-      "destinationCode": "MTY",
-      "scheduled": "2026-01-27T23:55:00Z",
-      "estimated": "2026-01-27T23:55:00Z",
-      "status": "Scheduled",
-      "terminal": null,
-      "gate": null
-    },
-    {
       "flightNumber": "DL1922",
       "airline": "DAL",
       "airlineCode": "DAL",
@@ -1967,6 +1954,20 @@
       "originCode": null,
       "destination": "Seattle-Tacoma Intl",
       "destinationCode": "SEA",
+      "scheduled": "2026-01-27T23:55:00Z",
+      "estimated": "2026-01-27T23:55:00Z",
+      "status": "Scheduled",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "Y45615",
+      "airline": "VOI",
+      "airlineCode": "VOI",
+      "origin": null,
+      "originCode": null,
+      "destination": "General Mariano Escobedo Int'l",
+      "destinationCode": "MTY",
       "scheduled": "2026-01-27T23:55:00Z",
       "estimated": "2026-01-27T23:55:00Z",
       "status": "Scheduled",
