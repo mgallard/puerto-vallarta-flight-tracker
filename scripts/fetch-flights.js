@@ -36,7 +36,7 @@ async function main() {
         
         // FlightAware AeroAPI /airports/{id}/flights endpoint
         // This returns scheduled and actual arrivals/departures
-        const url = `${CONFIG.baseUrl}/airports/${CONFIG.airportId}/flights?max_pages=2`;
+        const url = `${CONFIG.baseUrl}/airports/${CONFIG.airportId}/flights?max_pages=10`;
         
         const response = await fetch(url, {
             headers: {
@@ -62,8 +62,14 @@ async function main() {
                 city: 'Puerto Vallarta',
                 timezone: CONFIG.timezone
             },
-            arrivals: processFlights(data.arrivals || [], 'arrival'),
-            departures: processFlights(data.departures || [], 'departure')
+            arrivals: processFlights([
+                ...(data.arrivals || []),
+                ...(data.scheduled_arrivals || [])
+            ], 'arrival'),
+            departures: processFlights([
+                ...(data.departures || []),
+                ...(data.scheduled_departures || [])
+            ], 'departure')
         };
 
         // Save to file
@@ -91,7 +97,7 @@ function processFlights(flights, type) {
     // Get today's date in Mexico timezone for filtering (ISO YYYY-MM-DD)
     const today = new Date().toLocaleDateString('en-CA', { timeZone: CONFIG.timezone });
     
-    return flights
+    const processed = flights
         .map(flight => {
             const isArrival = type === 'arrival';
             
@@ -114,9 +120,9 @@ function processFlights(flights, type) {
                 destinationCode: !isArrival ? (flight.destination?.code_iata || flight.destination?.code || '') : null,
                 
                 // Times (using scheduled_on for arrivals, scheduled_off for departures)
-                scheduled: isArrival ? flight.scheduled_on : flight.scheduled_off,
-                estimated: isArrival ? flight.estimated_on : flight.estimated_off,
-                actual: isArrival ? flight.actual_on : flight.actual_off,
+                scheduled: isArrival ? (flight.scheduled_on || flight.scheduled_at) : (flight.scheduled_off || flight.scheduled_at),
+                estimated: isArrival ? (flight.estimated_on || flight.estimated_at) : (flight.estimated_off || flight.estimated_at),
+                actual: isArrival ? (flight.actual_on || flight.actual_at) : (flight.actual_off || flight.actual_at),
                 
                 status: status,
                 terminal: isArrival ? (flight.arrival_terminal || null) : (flight.departure_terminal || null),
@@ -128,11 +134,32 @@ function processFlights(flights, type) {
             if (!flight.scheduled) return false;
             const flightDate = flight.scheduled.split('T')[0];
             return flightDate === today;
-        })
-        .sort((a, b) => {
-            // Sort by scheduled time
-            return (a.scheduled || '').localeCompare(b.scheduled || '');
         });
+
+    // Deduplicate by flight number
+    const uniqueFlights = [];
+    const seen = new Set();
+    
+    // Sort by status priority (Landed/Departed > En Route > Scheduled) then by time
+    // to keep the most "active" record if duplicates exist
+    processed.sort((a, b) => {
+        const statusOrder = { 'Landed': 3, 'Departed': 3, 'En Route': 2, 'Scheduled': 1, 'Cancelled': 0 };
+        const statusDiff = (statusOrder[b.status] || 0) - (statusOrder[a.status] || 0);
+        if (statusDiff !== 0) return statusDiff;
+        return (a.scheduled || '').localeCompare(b.scheduled || '');
+    });
+
+    for (const flight of processed) {
+        if (!seen.has(flight.flightNumber)) {
+            seen.add(flight.flightNumber);
+            uniqueFlights.push(flight);
+        }
+    }
+
+    // Final sort by time for the JSON
+    return uniqueFlights.sort((a, b) => {
+        return (a.scheduled || '').localeCompare(b.scheduled || '');
+    });
 }
 
 // Save flight data to JSON file
