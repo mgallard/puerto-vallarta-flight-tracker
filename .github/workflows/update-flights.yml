@@ -39,10 +39,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Install Chrome for Puppeteer
-        run: npx puppeteer browsers install chrome
-      
-      - name: Scrape flight data from FlightAware
+      - name: Fetch flight data from FlightAware AeroAPI
+        env:
+          AEROAPI_KEY: ${{ secrets.AEROAPI_KEY }}
         run: npm run fetch
       
       - name: Check for changes
