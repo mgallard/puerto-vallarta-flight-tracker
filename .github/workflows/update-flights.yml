@@ -1,14 +1,19 @@
 name: Update Flight Data
 
-# Runs daily at 6:00 AM Mexico City time (12:00 UTC)
+# Runs twice daily at 6:00 AM and 5:00 PM Mexico City time
 # Also allows manual triggering from GitHub Actions UI
 
 on:
   schedule:
-    # 12:00 UTC = 6:00 AM Mexico City time (CST/UTC-6)
+    # Morning update: 12:00 UTC = 6:00 AM Mexico City time (CST/UTC-6)
     # In summer (CDT/UTC-5), this becomes 7:00 AM local time
-    # This timing ensures the full day's flight schedule is captured
+    # Captures morning and afternoon flights
     - cron: '0 12 * * *'
+    
+    # Evening update: 23:00 UTC = 5:00 PM Mexico City time (CST/UTC-6)
+    # In summer (CDT/UTC-5), this becomes 6:00 PM local time
+    # Captures evening and late-night flights
+    - cron: '0 23 * * *'
   workflow_dispatch:  # Allow manual trigger
   push:
     branches: [main]
