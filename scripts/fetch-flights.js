@@ -130,10 +130,15 @@ function processFlights(flights, type) {
             };
         })
         .filter(flight => {
-            // Only keep flights scheduled for today
+            // Only keep flights scheduled for today (in local timezone)
             if (!flight.scheduled) return false;
-            const flightDate = flight.scheduled.split('T')[0];
-            return flightDate === today;
+            try {
+                const date = new Date(flight.scheduled);
+                const flightLocalDate = date.toLocaleDateString('en-CA', { timeZone: CONFIG.timezone });
+                return flightLocalDate === today;
+            } catch (e) {
+                return false;
+            }
         });
 
     // Deduplicate by flight number
@@ -146,7 +151,10 @@ function processFlights(flights, type) {
         const statusOrder = { 'Landed': 3, 'Departed': 3, 'En Route': 2, 'Scheduled': 1, 'Cancelled': 0 };
         const statusDiff = (statusOrder[b.status] || 0) - (statusOrder[a.status] || 0);
         if (statusDiff !== 0) return statusDiff;
-        return (a.scheduled || '').localeCompare(b.scheduled || '');
+        
+        const timeA = new Date(a.scheduled).getTime();
+        const timeB = new Date(b.scheduled).getTime();
+        return timeA - timeB;
     });
 
     for (const flight of processed) {
@@ -158,7 +166,9 @@ function processFlights(flights, type) {
 
     // Final sort by time for the JSON
     return uniqueFlights.sort((a, b) => {
-        return (a.scheduled || '').localeCompare(b.scheduled || '');
+        const timeA = new Date(a.scheduled).getTime();
+        const timeB = new Date(b.scheduled).getTime();
+        return timeA - timeB;
     });
 }
 

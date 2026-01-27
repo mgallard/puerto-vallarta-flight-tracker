@@ -84,9 +84,9 @@
 
         // Sort by time
         const sortedFlights = [...flights].sort((a, b) => {
-            const timeA = a.scheduled || a.estimated || '';
-            const timeB = b.scheduled || b.estimated || '';
-            return timeA.localeCompare(timeB);
+            const timeA = new Date(a.scheduled || a.estimated || 0).getTime();
+            const timeB = new Date(b.scheduled || b.estimated || 0).getTime();
+            return timeA - timeB;
         });
 
         // Build table rows

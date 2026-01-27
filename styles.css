@@ -1,4 +1,4 @@
-/* Puerto Vallarta Flight Tracker - Compact White Theme */
+/* Puerto Vallarta Flight Tracker - Compact White Theme v1.2 */
 /* Colors from PuertoVallarta.net logo */
 
 :root {
@@ -27,7 +27,7 @@
     
     /* Fonts */
     --font-mono: 'Roboto Mono', monospace;
-    --font-sans: 'Poppins', -apple-system, sans-serif;
+    --font-sans: 'Poppins', sans-serif;
     --font-title: 'Oswald', sans-serif;
 }
 
@@ -38,7 +38,7 @@
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-sans) !important;
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.4;
