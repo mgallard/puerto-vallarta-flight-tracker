@@ -16,6 +16,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.7.0"
+    "puppeteer": "^21.0.0"
   }
 }

@@ -1,19 +1,18 @@
 name: Update Flight Data
 
-# Runs twice daily at 6:00 AM and 5:00 PM Mexico City time
+# Runs twice daily at 6:00 AM and 1:00 PM Mexico City time
+# Scrapes FlightAware for complete daily flight schedules
 # Also allows manual triggering from GitHub Actions UI
 
 on:
   schedule:
     # Morning update: 12:00 UTC = 6:00 AM Mexico City time (CST/UTC-6)
     # In summer (CDT/UTC-5), this becomes 7:00 AM local time
-    # Captures morning and afternoon flights
     - cron: '0 12 * * *'
     
-    # Evening update: 23:00 UTC = 5:00 PM Mexico City time (CST/UTC-6)
-    # In summer (CDT/UTC-5), this becomes 6:00 PM local time
-    # Captures evening and late-night flights
-    - cron: '0 23 * * *'
+    # Afternoon update: 19:00 UTC = 1:00 PM Mexico City time (CST/UTC-6)
+    # In summer (CDT/UTC-5), this becomes 2:00 PM local time
+    - cron: '0 19 * * *'
   workflow_dispatch:  # Allow manual trigger
   push:
     branches: [main]
@@ -40,9 +39,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Fetch flight data
-        env:
-          AVIATIONSTACK_API_KEY: ${{ secrets.AVIATIONSTACK_API_KEY }}
+      - name: Scrape flight data from FlightAware
         run: npm run fetch
       
       - name: Check for changes
