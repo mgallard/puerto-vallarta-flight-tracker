@@ -37,17 +37,23 @@ async function main() {
                 '--disable-setuid-sandbox',
                 '--disable-dev-shm-usage',
                 '--disable-accelerated-2d-canvas',
-                '--disable-gpu'
+                '--disable-gpu',
+                '--window-size=1920,1080'
             ]
         });
 
         // Fetch arrivals and departures
         console.log(`\n📡 Scraping flights for airport: ${CONFIG.airportCode} (${CONFIG.icaoCode})`);
         
-        const [arrivals, departures] = await Promise.all([
-            scrapeFlights(browser, 'arrivals'),
-            scrapeFlights(browser, 'departures')
-        ]);
+        // Run sequentially to be less suspicious and easier to debug
+        console.log('   Starting arrivals scrape...');
+        const arrivals = await scrapeFlights(browser, 'arrivals');
+        
+        // Small delay between scrapes
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        
+        console.log('   Starting departures scrape...');
+        const departures = await scrapeFlights(browser, 'departures');
 
         // Structure the data
         const flightData = {
@@ -87,77 +93,144 @@ async function main() {
 // Scrape flights from FlightAware
 async function scrapeFlights(browser, type) {
     const url = `${CONFIG.flightAwareBaseUrl}/${CONFIG.icaoCode}/${type}`;
-    console.log(`   Scraping ${type}: ${url}`);
-    
     const page = await browser.newPage();
     
-    // Set a realistic user agent
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    // Set realistic headers
+    await page.setExtraHTTPHeaders({
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache'
+    });
+    
+    // Set a modern User Agent
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36');
     
     // Set viewport
     await page.setViewport({ width: 1920, height: 1080 });
     
     try {
-        // Navigate to page with timeout
-        await page.goto(url, { 
+        console.log(`   Navigating to: ${url}`);
+        
+        // Navigate to page
+        const response = await page.goto(url, { 
             waitUntil: 'networkidle2',
             timeout: 60000 
         });
-        
-        // Wait for the flight table to load
-        await page.waitForSelector('table.prettyTable', { timeout: 30000 });
+
+        // Debug: Log page title
+        const title = await page.title();
+        console.log(`   Page Title: "${title}"`);
+
+        // Check if we are being blocked
+        if (title.includes('Access Denied') || title.includes('Attention Required') || title.includes('Cloudflare')) {
+            console.warn(`   ⚠️ Warning: Detected bot protection page ("${title}")`);
+            
+            // Log a bit of the body to confirm
+            const bodySnippet = await page.evaluate(() => document.body.innerText.substring(0, 200).replace(/\n/g, ' '));
+            console.log(`   Body snippet: ${bodySnippet}...`);
+            
+            // If we are on a block page, we can't continue with this URL
+            return [];
+        }
+
+        // Wait for the flight table or a "no flights" message
+        try {
+            // Try to wait for either the table or a known error message
+            await Promise.race([
+                page.waitForSelector('table.prettyTable', { timeout: 15000 }),
+                page.waitForSelector('.noFlights', { timeout: 15000 }),
+                page.waitForXPath("//td[contains(text(), 'No flights')]", { timeout: 15000 })
+            ]);
+        } catch (e) {
+            console.warn('   ⚠️ Could not find table with .prettyTable selector, trying fallback...');
+            
+            // Check if ANY table exists
+            const hasTable = await page.evaluate(() => document.querySelectorAll('table').length > 0);
+            if (!hasTable) {
+                console.error('   ❌ No tables found on page at all.');
+                // Take a screenshot for debugging if we were in a local env, 
+                // but in CI we just log the HTML structure
+                const html = await page.evaluate(() => {
+                    const tables = Array.from(document.querySelectorAll('table')).map(t => t.className);
+                    return `Tables found: ${tables.length} (${tables.join(', ')})`;
+                });
+                console.log(`   ${html}`);
+                return [];
+            }
+        }
         
         // Extract flight data from the table
         const flights = await page.evaluate((flightType) => {
             const results = [];
-            const table = document.querySelector('table.prettyTable');
+            // Try different table selectors
+            const table = document.querySelector('table.prettyTable') || 
+                          document.querySelector('table[id*="arrivals"]') || 
+                          document.querySelector('table[id*="departures"]') ||
+                          document.querySelector('table');
             
             if (!table) return results;
             
             const rows = table.querySelectorAll('tbody tr');
+            if (rows.length === 0) return results;
             
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells.length < 5) return;
+                if (cells.length < 3) return;
                 
-                // FlightAware table structure varies, but typically:
-                // For arrivals: Flight, Origin, Departure, Arrival, Status
-                // For departures: Flight, Destination, Departure, Arrival, Status
-                
+                // Flight number is usually in a link
                 const flightLink = row.querySelector('td a[href*="/live/flight/"]');
-                const flightNumber = flightLink ? flightLink.textContent.trim() : '';
+                let flightNumber = flightLink ? flightLink.textContent.trim() : '';
                 
-                if (!flightNumber) return;
+                // If no link, try first column
+                if (!flightNumber && cells[0]) {
+                    flightNumber = cells[0].textContent.trim();
+                }
+                
+                if (!flightNumber || flightNumber.length < 2) return;
                 
                 // Get airline from flight number (first 2-3 letters)
                 const airlineCode = flightNumber.match(/^[A-Z]{2,3}/)?.[0] || '';
                 
-                // Get origin/destination (second column typically)
-                const locationCell = cells[1];
-                const locationLink = locationCell?.querySelector('a');
-                const locationText = locationLink ? locationLink.textContent.trim() : locationCell?.textContent.trim() || '';
-                const locationCode = locationLink?.href?.match(/airport\/([A-Z]{3,4})/)?.[1] || '';
+                // Location logic varies by type
+                let locationText = '';
+                let locationCode = '';
                 
-                // Get times - look for time patterns
+                if (flightType === 'arrivals') {
+                    // Usually 2nd column for origin
+                    const locCell = cells[1];
+                    const locLink = locCell?.querySelector('a');
+                    locationText = locLink ? locLink.textContent.trim() : locCell?.textContent.trim() || '';
+                    locationCode = locLink?.href?.match(/airport\/([A-Z]{3,4})/)?.[1] || '';
+                } else {
+                    // Usually 2nd column for destination
+                    const locCell = cells[1];
+                    const locLink = locCell?.querySelector('a');
+                    locationText = locLink ? locLink.textContent.trim() : locCell?.textContent.trim() || '';
+                    locationCode = locLink?.href?.match(/airport\/([A-Z]{3,4})/)?.[1] || '';
+                }
+                
+                // Get times - improved regex
                 const timePattern = /(\d{1,2}:\d{2})\s*(AM|PM)?/gi;
-                const allText = row.textContent;
-                const times = allText.match(timePattern) || [];
+                const rowText = row.innerText;
+                const times = rowText.match(timePattern) || [];
                 
                 // Get status
                 const statusCell = cells[cells.length - 1];
                 let status = statusCell?.textContent.trim() || 'Scheduled';
                 
                 // Clean up status
-                if (status.toLowerCase().includes('landed')) status = 'Landed';
-                else if (status.toLowerCase().includes('en route') || status.toLowerCase().includes('in air')) status = 'En Route';
-                else if (status.toLowerCase().includes('scheduled')) status = 'Scheduled';
-                else if (status.toLowerCase().includes('cancelled') || status.toLowerCase().includes('canceled')) status = 'Cancelled';
-                else if (status.toLowerCase().includes('delayed')) status = 'Delayed';
-                else if (status.toLowerCase().includes('departed')) status = 'Departed';
+                const s = status.toLowerCase();
+                if (s.includes('landed')) status = 'Landed';
+                else if (s.includes('en route') || s.includes('in air') || s.includes('active')) status = 'En Route';
+                else if (s.includes('scheduled')) status = 'Scheduled';
+                else if (s.includes('cancelled') || s.includes('canceled')) status = 'Cancelled';
+                else if (s.includes('delayed')) status = 'Delayed';
+                else if (s.includes('departed')) status = 'Departed';
+                else if (s.includes('arrived')) status = 'Landed';
                 
                 const flight = {
                     flightNumber: flightNumber,
-                    airline: airlineCode, // Will be enriched later if possible
                     airlineCode: airlineCode,
                     scheduled: times[0] || null,
                     status: status
@@ -187,8 +260,12 @@ async function scrapeFlights(browser, type) {
             airline: getAirlineName(flight.airlineCode)
         }));
         
+        console.log(`   Found ${enrichedFlights.length} flights for ${type}`);
         return enrichedFlights;
         
+    } catch (e) {
+        console.error(`   ❌ Error scraping ${type}:`, e.message);
+        return [];
     } finally {
         await page.close();
     }
@@ -196,6 +273,7 @@ async function scrapeFlights(browser, type) {
 
 // Map airline codes to names
 function getAirlineName(code) {
+    if (!code) return 'Unknown';
     const airlines = {
         'AA': 'American Airlines',
         'DL': 'Delta Air Lines',
@@ -251,7 +329,7 @@ function getAirlineName(code) {
         '4O': 'Interjet'
     };
     
-    return airlines[code] || code;
+    return airlines[code.toUpperCase()] || code;
 }
 
 // Save flight data to JSON file
