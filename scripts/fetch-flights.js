@@ -36,7 +36,7 @@ async function main() {
         
         // FlightAware AeroAPI /airports/{id}/flights endpoint
         // This returns scheduled and actual arrivals/departures
-        const url = `${CONFIG.baseUrl}/airports/${CONFIG.airportId}/flights?max_pages=10`;
+        const url = `${CONFIG.baseUrl}/airports/${CONFIG.airportId}/flights?max_pages=5`;
         
         const response = await fetch(url, {
             headers: {
