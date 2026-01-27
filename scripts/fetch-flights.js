@@ -103,10 +103,20 @@ function processFlights(flights, type) {
             
             // Map status
             let status = 'Scheduled';
-            if (flight.cancelled) status = 'Cancelled';
-            else if (flight.diverted) status = 'Diverted';
-            else if (flight.actual_on || flight.actual_off) status = isArrival ? 'Landed' : 'Departed';
-            else if (flight.estimated_on || flight.estimated_off) status = 'En Route';
+            if (flight.cancelled) {
+                status = 'Cancelled';
+            } else if (flight.diverted) {
+                status = 'Diverted';
+            } else if (isArrival) {
+                // Arrival: Landed if actual_on exists, En Route if it has left origin (actual_off)
+                if (flight.actual_on) status = 'Landed';
+                else if (flight.actual_off) status = 'En Route';
+                else status = 'Scheduled';
+            } else {
+                // Departure: Departed only if actual_off exists
+                if (flight.actual_off) status = 'Departed';
+                else status = 'Scheduled';
+            }
 
             return {
                 flightNumber: flight.ident_iata || flight.ident || '—',
