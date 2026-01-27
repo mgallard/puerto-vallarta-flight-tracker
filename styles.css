@@ -27,7 +27,8 @@
     
     /* Fonts */
     --font-mono: 'Roboto Mono', monospace;
-    --font-sans: 'Roboto', -apple-system, sans-serif;
+    --font-sans: 'Poppins', -apple-system, sans-serif;
+    --font-title: 'Oswald', sans-serif;
 }
 
 * {
@@ -71,8 +72,8 @@ body {
 }
 
 .airport-code {
-    font-family: var(--font-mono);
-    font-size: 1.5rem;
+    font-family: var(--font-title);
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--pvr-yellow);
     letter-spacing: 0.05em;
@@ -81,17 +82,22 @@ body {
 .airport-name {
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
+    line-height: 1.1;
+    font-family: var(--font-title);
+    text-transform: uppercase;
 }
 
 .airport-name .city {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 .airport-name .full-name {
-    font-size: 0.7rem;
-    opacity: 0.85;
+    font-size: 0.65rem;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 0.01em;
 }
 
 .last-updated {
@@ -102,9 +108,10 @@ body {
 .update-label {
     opacity: 0.8;
     display: block;
-    font-size: 0.65rem;
+    font-family: var(--font-title);
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
 }
 
 #update-time {
@@ -129,8 +136,10 @@ body {
     background: transparent;
     border: none;
     color: var(--text-secondary);
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -179,7 +188,8 @@ body {
     font-weight: 600;
     color: var(--text-secondary);
     text-transform: uppercase;
-    font-size: 0.65rem;
+    font-family: var(--font-title);
+    font-size: 0.75rem;
     letter-spacing: 0.05em;
     border-bottom: 1px solid var(--border-color);
 }
@@ -246,8 +256,9 @@ body {
     display: inline-block;
     padding: 3px 8px;
     border-radius: 12px;
-    font-size: 0.65rem;
-    font-weight: 600;
+    font-family: var(--font-title);
+    font-size: 0.7rem;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.03em;
 }
