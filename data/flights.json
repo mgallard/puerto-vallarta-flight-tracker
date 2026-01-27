@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-27T18:29:24.019Z",
+  "lastUpdated": "2026-01-27T18:48:01.611Z",
   "airport": {
     "code": "PVR",
     "icao": "MMPR",
@@ -152,8 +152,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T17:38:00Z",
-      "estimated": "2026-01-27T20:07:00Z",
-      "status": "Landed",
+      "estimated": "2026-01-27T20:11:00Z",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -257,7 +257,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T18:08:00Z",
       "estimated": "2026-01-27T18:50:30Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -270,7 +270,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T18:19:00Z",
-      "estimated": "2026-01-27T18:42:00Z",
+      "estimated": "2026-01-27T18:32:48Z",
+      "actual": "2026-01-27T18:32:48Z",
       "status": "Landed",
       "terminal": null,
       "gate": null
@@ -284,7 +285,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T18:20:00Z",
-      "estimated": "2026-01-27T18:32:00Z",
+      "estimated": "2026-01-27T18:35:00Z",
+      "actual": "2026-01-27T18:35:00Z",
       "status": "Landed",
       "terminal": null,
       "gate": null
@@ -314,7 +316,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T18:32:00Z",
       "estimated": "2026-01-27T19:03:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -327,8 +329,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T18:38:00Z",
-      "estimated": "2026-01-27T18:52:00Z",
-      "status": "Landed",
+      "estimated": "2026-01-27T18:54:00Z",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -341,7 +343,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T18:56:00Z",
-      "estimated": "2026-01-27T20:20:23Z",
+      "estimated": "2026-01-27T20:38:39Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -355,7 +357,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:00:00Z",
-      "estimated": "2026-01-27T18:41:00Z",
+      "estimated": "2026-01-27T18:42:35Z",
+      "actual": "2026-01-27T18:42:35Z",
       "status": "Landed",
       "terminal": null,
       "gate": null
@@ -369,7 +372,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:06:00Z",
-      "estimated": "2026-01-27T18:31:07Z",
+      "estimated": "2026-01-27T18:29:49Z",
+      "actual": "2026-01-27T18:29:49Z",
       "status": "Landed",
       "terminal": null,
       "gate": null
@@ -384,7 +388,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:06:00Z",
       "estimated": "2026-01-27T19:50:39Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -398,7 +402,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:10:00Z",
       "estimated": "2026-01-27T19:12:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -412,7 +416,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:15:00Z",
       "estimated": "2026-01-27T19:22:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -425,8 +429,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:26:00Z",
-      "estimated": "2026-01-27T19:24:00Z",
-      "status": "Landed",
+      "estimated": "2026-01-27T19:27:00Z",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -439,8 +443,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:28:00Z",
-      "estimated": "2026-01-27T20:09:00Z",
-      "status": "Landed",
+      "estimated": "2026-01-27T20:11:00Z",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -454,7 +458,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:29:00Z",
       "estimated": "2026-01-27T19:20:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -468,7 +472,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:30:00Z",
       "estimated": "2026-01-27T19:14:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -481,8 +485,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:30:00Z",
-      "estimated": "2026-01-27T19:16:00Z",
-      "status": "Landed",
+      "estimated": "2026-01-27T19:15:00Z",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -496,7 +500,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:31:00Z",
       "estimated": "2026-01-27T19:13:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -510,7 +514,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:43:20Z",
       "estimated": "2026-01-27T19:45:14Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -524,7 +528,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T19:47:00Z",
       "estimated": "2026-01-27T19:35:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -551,8 +555,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T19:56:00Z",
-      "estimated": "2026-01-27T19:38:00Z",
-      "status": "Landed",
+      "estimated": "2026-01-27T19:45:00Z",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -566,7 +570,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T20:00:00Z",
       "estimated": "2026-01-27T19:59:30Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -580,21 +584,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T20:10:00Z",
       "estimated": "2026-01-27T20:10:48Z",
-      "status": "En Route",
-      "terminal": null,
-      "gate": null
-    },
-    {
-      "flightNumber": "AC999",
-      "airline": "ACA",
-      "airlineCode": "ACA",
-      "origin": "Montreal-Trudeau",
-      "originCode": "YUL",
-      "destination": null,
-      "destinationCode": null,
-      "scheduled": "2026-01-27T20:10:00Z",
-      "estimated": "2026-01-28T00:40:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -608,7 +598,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T20:20:00Z",
       "estimated": "2026-01-27T20:15:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -622,7 +612,21 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T20:20:00Z",
       "estimated": "2026-01-27T20:20:13Z",
-      "status": "En Route",
+      "status": "Scheduled",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "AC999",
+      "airline": "ACA",
+      "airlineCode": "ACA",
+      "origin": "Montreal-Trudeau",
+      "originCode": "YUL",
+      "destination": null,
+      "destinationCode": null,
+      "scheduled": "2026-01-27T20:20:00Z",
+      "estimated": "2026-01-28T01:00:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -636,7 +640,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T20:32:00Z",
       "estimated": "2026-01-27T20:32:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -650,7 +654,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T20:51:00Z",
       "estimated": "2026-01-27T21:07:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -664,20 +668,6 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T20:54:00Z",
       "estimated": "2026-01-27T20:57:39Z",
-      "status": "Landed",
-      "terminal": null,
-      "gate": null
-    },
-    {
-      "flightNumber": "AS475",
-      "airline": "ASA",
-      "airlineCode": "ASA",
-      "origin": "San Diego Intl",
-      "originCode": "SAN",
-      "destination": null,
-      "destinationCode": null,
-      "scheduled": "2026-01-27T20:54:00Z",
-      "estimated": "2026-01-27T20:54:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -691,8 +681,22 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T20:58:00Z",
-      "estimated": "2026-01-27T20:51:00Z",
-      "status": "Landed",
+      "estimated": "2026-01-27T21:01:00Z",
+      "status": "En Route",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "AS475",
+      "airline": "ASA",
+      "airlineCode": "ASA",
+      "origin": "San Diego Intl",
+      "originCode": "SAN",
+      "destination": null,
+      "destinationCode": null,
+      "scheduled": "2026-01-27T21:17:00Z",
+      "estimated": "2026-01-27T21:34:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -704,8 +708,8 @@
       "originCode": "TIJ",
       "destination": null,
       "destinationCode": null,
-      "scheduled": "2026-01-27T21:08:00Z",
-      "estimated": "2026-01-27T21:08:21Z",
+      "scheduled": "2026-01-27T21:20:00Z",
+      "estimated": "2026-01-27T21:09:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -719,8 +723,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T21:26:00Z",
-      "estimated": "2026-01-27T21:39:00Z",
-      "status": "En Route",
+      "estimated": "2026-01-27T21:26:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -734,21 +738,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T21:33:00Z",
       "estimated": "2026-01-27T22:26:00Z",
-      "status": "En Route",
-      "terminal": null,
-      "gate": null
-    },
-    {
-      "flightNumber": "AS437",
-      "airline": "ASA",
-      "airlineCode": "ASA",
-      "origin": "Los Angeles Intl",
-      "originCode": "LAX",
-      "destination": null,
-      "destinationCode": null,
-      "scheduled": "2026-01-27T21:40:00Z",
-      "estimated": "2026-01-27T21:57:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -760,9 +750,9 @@
       "originCode": "LRD",
       "destination": null,
       "destinationCode": null,
-      "scheduled": "2026-01-27T21:42:00Z",
+      "scheduled": "2026-01-27T21:38:00Z",
       "estimated": "2026-01-27T21:48:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -775,8 +765,8 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T21:44:00Z",
-      "estimated": "2026-01-27T21:39:00Z",
-      "status": "En Route",
+      "estimated": "2026-01-27T21:32:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -790,7 +780,21 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T21:44:00Z",
       "estimated": "2026-01-27T21:44:56Z",
-      "status": "En Route",
+      "status": "Scheduled",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "AS437",
+      "airline": "ASA",
+      "airlineCode": "ASA",
+      "origin": "Los Angeles Intl",
+      "originCode": "LAX",
+      "destination": null,
+      "destinationCode": null,
+      "scheduled": "2026-01-27T21:46:00Z",
+      "estimated": "2026-01-27T21:46:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -802,9 +806,9 @@
       "originCode": "DFW",
       "destination": null,
       "destinationCode": null,
-      "scheduled": "2026-01-27T21:48:00Z",
-      "estimated": "2026-01-27T21:56:00Z",
-      "status": "En Route",
+      "scheduled": "2026-01-27T21:47:00Z",
+      "estimated": "2026-01-27T21:47:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -818,7 +822,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:05:00Z",
       "estimated": "2026-01-27T22:14:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -832,7 +836,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:07:00Z",
       "estimated": "2026-01-27T22:01:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -846,7 +850,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:13:00Z",
       "estimated": "2026-01-27T22:17:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -860,7 +864,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:13:20Z",
       "estimated": "2026-01-27T22:15:56Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -874,7 +878,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:15:00Z",
       "estimated": "2026-01-27T22:00:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -888,7 +892,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:26:00Z",
       "estimated": "2026-01-27T22:15:00Z",
-      "status": "Landed",
+      "status": "En Route",
       "terminal": null,
       "gate": null
     },
@@ -902,7 +906,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:26:00Z",
       "estimated": "2026-01-27T22:26:22Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -916,7 +920,21 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T22:55:00Z",
       "estimated": "2026-01-27T22:55:57Z",
-      "status": "En Route",
+      "status": "Scheduled",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "WS2684",
+      "airline": "WJA",
+      "airlineCode": "WJA",
+      "origin": "Regina Int'l",
+      "originCode": "YQR",
+      "destination": null,
+      "destinationCode": null,
+      "scheduled": "2026-01-27T23:00:00Z",
+      "estimated": "2026-01-28T00:00:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -930,7 +948,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T23:16:00Z",
       "estimated": "2026-01-27T23:16:02Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -943,21 +961,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T23:21:00Z",
-      "estimated": "2026-01-27T23:21:00Z",
-      "status": "En Route",
-      "terminal": null,
-      "gate": null
-    },
-    {
-      "flightNumber": "WS2684",
-      "airline": "WJA",
-      "airlineCode": "WJA",
-      "origin": "Regina Int'l",
-      "originCode": "YQR",
-      "destination": null,
-      "destinationCode": null,
-      "scheduled": "2026-01-27T23:29:00Z",
-      "estimated": "2026-01-27T23:29:00Z",
+      "estimated": "2026-01-27T23:17:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -971,7 +975,7 @@
       "destination": null,
       "destinationCode": null,
       "scheduled": "2026-01-27T23:35:00Z",
-      "estimated": "2026-01-27T23:35:00Z",
+      "estimated": "2026-01-27T23:18:00Z",
       "status": "En Route",
       "terminal": null,
       "gate": null
@@ -986,7 +990,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-27T23:56:00Z",
       "estimated": "2026-01-27T23:56:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1000,7 +1004,7 @@
       "destinationCode": null,
       "scheduled": "2026-01-28T03:30:00Z",
       "estimated": "2026-01-28T03:30:32Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     }
@@ -1087,8 +1091,8 @@
       "airlineCode": "VJA",
       "origin": null,
       "originCode": null,
-      "destination": "Unknown",
-      "destinationCode": "",
+      "destination": "Oakland Intl",
+      "destinationCode": "OAK",
       "scheduled": "2026-01-27T16:23:18Z",
       "estimated": "2026-01-27T16:22:55Z",
       "actual": "2026-01-27T16:22:55Z",
@@ -1132,8 +1136,8 @@
       "airlineCode": "",
       "origin": null,
       "originCode": null,
-      "destination": "Unknown",
-      "destinationCode": "",
+      "destination": "Austin-Bergstrom Intl",
+      "destinationCode": "AUS",
       "scheduled": "2026-01-27T17:01:06Z",
       "estimated": "2026-01-27T16:55:42Z",
       "actual": "2026-01-27T16:55:42Z",
@@ -1166,7 +1170,7 @@
       "destinationCode": "SAT",
       "scheduled": "2026-01-27T17:51:00Z",
       "estimated": "2026-01-27T17:57:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1180,7 +1184,22 @@
       "destinationCode": "YYZ",
       "scheduled": "2026-01-27T18:35:00Z",
       "estimated": "2026-01-27T18:35:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "XB-VID",
+      "airline": "—",
+      "airlineCode": "",
+      "origin": null,
+      "originCode": null,
+      "destination": "Unknown",
+      "destinationCode": "",
+      "scheduled": "2026-01-27T18:53:14Z",
+      "estimated": "2026-01-27T18:44:18Z",
+      "actual": "2026-01-27T18:44:18Z",
+      "status": "Departed",
       "terminal": null,
       "gate": null
     },
@@ -1194,7 +1213,7 @@
       "destinationCode": "DFW",
       "scheduled": "2026-01-27T18:54:00Z",
       "estimated": "2026-01-27T21:17:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1208,7 +1227,7 @@
       "destinationCode": "YOW",
       "scheduled": "2026-01-27T19:05:00Z",
       "estimated": "2026-01-27T18:55:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1222,7 +1241,7 @@
       "destinationCode": "TLC",
       "scheduled": "2026-01-27T19:05:00Z",
       "estimated": "2026-01-27T19:05:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1236,7 +1255,7 @@
       "destinationCode": "YYZ",
       "scheduled": "2026-01-27T19:10:00Z",
       "estimated": "2026-01-27T19:28:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1250,7 +1269,7 @@
       "destinationCode": "MEX",
       "scheduled": "2026-01-27T19:16:00Z",
       "estimated": "2026-01-27T19:16:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1264,7 +1283,7 @@
       "destinationCode": "YEG",
       "scheduled": "2026-01-27T19:20:00Z",
       "estimated": "2026-01-27T19:20:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1278,7 +1297,7 @@
       "destinationCode": "MEX",
       "scheduled": "2026-01-27T19:29:00Z",
       "estimated": "2026-01-27T19:29:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1292,7 +1311,7 @@
       "destinationCode": "MTY",
       "scheduled": "2026-01-27T19:40:00Z",
       "estimated": "2026-01-27T19:40:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1306,7 +1325,7 @@
       "destinationCode": "HOU",
       "scheduled": "2026-01-27T19:40:00Z",
       "estimated": "2026-01-27T19:45:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1320,7 +1339,7 @@
       "destinationCode": "DEN",
       "scheduled": "2026-01-27T19:44:00Z",
       "estimated": "2026-01-27T19:44:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1333,8 +1352,8 @@
       "destination": "Detroit Metro Wayne Co",
       "destinationCode": "DTW",
       "scheduled": "2026-01-27T20:05:00Z",
-      "estimated": "2026-01-27T20:10:00Z",
-      "status": "En Route",
+      "estimated": "2026-01-27T20:05:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1348,7 +1367,7 @@
       "destinationCode": "ORD",
       "scheduled": "2026-01-27T20:10:00Z",
       "estimated": "2026-01-27T20:14:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1362,7 +1381,7 @@
       "destinationCode": "TIJ",
       "scheduled": "2026-01-27T20:11:00Z",
       "estimated": "2026-01-27T20:11:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1376,7 +1395,7 @@
       "destinationCode": "SCF",
       "scheduled": "2026-01-27T20:15:31Z",
       "estimated": "2026-01-27T22:01:44Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1390,7 +1409,7 @@
       "destinationCode": "RSW",
       "scheduled": "2026-01-27T20:19:00Z",
       "estimated": "2026-01-27T19:30:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1404,7 +1423,7 @@
       "destinationCode": "PHX",
       "scheduled": "2026-01-27T20:21:00Z",
       "estimated": "2026-01-27T20:29:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1418,7 +1437,7 @@
       "destinationCode": "MTY",
       "scheduled": "2026-01-27T20:30:00Z",
       "estimated": "2026-01-27T20:30:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1432,7 +1451,7 @@
       "destinationCode": "TUS",
       "scheduled": "2026-01-27T20:30:00Z",
       "estimated": "2026-01-27T20:40:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1446,7 +1465,7 @@
       "destinationCode": "ATL",
       "scheduled": "2026-01-27T20:32:00Z",
       "estimated": "2026-01-27T20:32:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1460,7 +1479,7 @@
       "destinationCode": "PHX",
       "scheduled": "2026-01-27T20:45:00Z",
       "estimated": "2026-01-27T20:50:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1474,7 +1493,7 @@
       "destinationCode": "YYZ",
       "scheduled": "2026-01-27T20:45:00Z",
       "estimated": "2026-01-27T21:13:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1488,7 +1507,7 @@
       "destinationCode": "SFO",
       "scheduled": "2026-01-27T20:47:00Z",
       "estimated": "2026-01-27T20:47:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1502,7 +1521,7 @@
       "destinationCode": "TLC",
       "scheduled": "2026-01-27T20:48:00Z",
       "estimated": "2026-01-27T20:48:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1516,7 +1535,7 @@
       "destinationCode": "GDL",
       "scheduled": "2026-01-27T20:48:30Z",
       "estimated": "2026-01-27T20:49:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1530,7 +1549,7 @@
       "destinationCode": "SFO",
       "scheduled": "2026-01-27T20:50:00Z",
       "estimated": "2026-01-27T20:55:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1544,7 +1563,7 @@
       "destinationCode": "ORD",
       "scheduled": "2026-01-27T20:53:00Z",
       "estimated": "2026-01-27T21:03:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1558,7 +1577,7 @@
       "destinationCode": "YYC",
       "scheduled": "2026-01-27T21:05:00Z",
       "estimated": "2026-01-27T21:05:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1572,7 +1591,7 @@
       "destinationCode": "DFW",
       "scheduled": "2026-01-27T21:11:00Z",
       "estimated": "2026-01-27T21:37:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1586,7 +1605,7 @@
       "destinationCode": "DEN",
       "scheduled": "2026-01-27T21:18:00Z",
       "estimated": "2026-01-27T21:18:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1600,7 +1619,7 @@
       "destinationCode": "MSP",
       "scheduled": "2026-01-27T21:20:00Z",
       "estimated": "2026-01-27T21:15:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1614,7 +1633,7 @@
       "destinationCode": "BJX",
       "scheduled": "2026-01-27T21:26:00Z",
       "estimated": "2026-01-27T21:26:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1628,7 +1647,7 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-27T21:30:00Z",
       "estimated": "2026-01-28T01:42:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1642,7 +1661,7 @@
       "destinationCode": "GDL",
       "scheduled": "2026-01-27T21:35:00Z",
       "estimated": "2026-01-27T21:35:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1656,7 +1675,7 @@
       "destinationCode": "MEX",
       "scheduled": "2026-01-27T21:48:00Z",
       "estimated": "2026-01-27T21:48:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1670,7 +1689,7 @@
       "destinationCode": "IAH",
       "scheduled": "2026-01-27T21:50:00Z",
       "estimated": "2026-01-27T21:54:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1684,7 +1703,7 @@
       "destinationCode": "JFK",
       "scheduled": "2026-01-27T22:03:00Z",
       "estimated": "2026-01-27T22:03:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1698,7 +1717,7 @@
       "destinationCode": "YUL",
       "scheduled": "2026-01-27T22:05:00Z",
       "estimated": "2026-01-27T23:15:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1712,7 +1731,7 @@
       "destinationCode": "YYZ",
       "scheduled": "2026-01-27T22:10:00Z",
       "estimated": "2026-01-27T22:00:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1726,7 +1745,7 @@
       "destinationCode": "YVR",
       "scheduled": "2026-01-27T22:10:00Z",
       "estimated": "2026-01-27T22:10:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1740,7 +1759,7 @@
       "destinationCode": "DFW",
       "scheduled": "2026-01-27T22:15:00Z",
       "estimated": "2026-01-27T22:25:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1754,7 +1773,7 @@
       "destinationCode": "TIJ",
       "scheduled": "2026-01-27T22:20:00Z",
       "estimated": "2026-01-27T22:20:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1768,7 +1787,7 @@
       "destinationCode": "NLU",
       "scheduled": "2026-01-27T22:22:00Z",
       "estimated": "2026-01-27T23:17:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1782,7 +1801,7 @@
       "destinationCode": "SMF",
       "scheduled": "2026-01-27T22:30:00Z",
       "estimated": "2026-01-27T22:42:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1795,8 +1814,8 @@
       "destination": "San Diego Intl",
       "destinationCode": "SAN",
       "scheduled": "2026-01-27T22:40:00Z",
-      "estimated": "2026-01-27T22:40:00Z",
-      "status": "En Route",
+      "estimated": "2026-01-27T23:07:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1810,7 +1829,7 @@
       "destinationCode": "TIJ",
       "scheduled": "2026-01-27T22:46:00Z",
       "estimated": "2026-01-27T22:46:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1824,7 +1843,7 @@
       "destinationCode": "PHX",
       "scheduled": "2026-01-27T23:00:00Z",
       "estimated": "2026-01-27T23:08:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1838,7 +1857,7 @@
       "destinationCode": "DFW",
       "scheduled": "2026-01-27T23:17:00Z",
       "estimated": "2026-01-27T23:26:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1852,7 +1871,7 @@
       "destinationCode": "GDL",
       "scheduled": "2026-01-27T23:19:30Z",
       "estimated": "2026-01-27T23:20:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1866,7 +1885,7 @@
       "destinationCode": "YWG",
       "scheduled": "2026-01-27T23:20:00Z",
       "estimated": "2026-01-27T23:20:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1880,7 +1899,7 @@
       "destinationCode": "LAX",
       "scheduled": "2026-01-27T23:20:00Z",
       "estimated": "2026-01-27T23:20:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1894,7 +1913,7 @@
       "destinationCode": "PDX",
       "scheduled": "2026-01-27T23:25:00Z",
       "estimated": "2026-01-27T23:25:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1908,7 +1927,7 @@
       "destinationCode": "YYC",
       "scheduled": "2026-01-27T23:40:00Z",
       "estimated": "2026-01-27T23:40:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1921,22 +1940,8 @@
       "destination": "Vancouver Int'l",
       "destinationCode": "YVR",
       "scheduled": "2026-01-27T23:50:00Z",
-      "estimated": "2026-01-28T02:03:00Z",
-      "status": "En Route",
-      "terminal": null,
-      "gate": null
-    },
-    {
-      "flightNumber": "DL1922",
-      "airline": "DAL",
-      "airlineCode": "DAL",
-      "origin": null,
-      "originCode": null,
-      "destination": "Seattle-Tacoma Intl",
-      "destinationCode": "SEA",
-      "scheduled": "2026-01-27T23:55:00Z",
-      "estimated": "2026-01-27T23:55:00Z",
-      "status": "En Route",
+      "estimated": "2026-01-28T02:23:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1950,7 +1955,21 @@
       "destinationCode": "MTY",
       "scheduled": "2026-01-27T23:55:00Z",
       "estimated": "2026-01-27T23:55:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
+      "terminal": null,
+      "gate": null
+    },
+    {
+      "flightNumber": "DL1922",
+      "airline": "DAL",
+      "airlineCode": "DAL",
+      "origin": null,
+      "originCode": null,
+      "destination": "Seattle-Tacoma Intl",
+      "destinationCode": "SEA",
+      "scheduled": "2026-01-27T23:55:00Z",
+      "estimated": "2026-01-27T23:55:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1964,7 +1983,7 @@
       "destinationCode": "SEA",
       "scheduled": "2026-01-27T23:55:00Z",
       "estimated": "2026-01-28T00:07:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1978,7 +1997,7 @@
       "destinationCode": "MEX",
       "scheduled": "2026-01-28T00:00:00Z",
       "estimated": "2026-01-28T00:00:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -1992,7 +2011,7 @@
       "destinationCode": "MTY",
       "scheduled": "2026-01-28T00:25:00Z",
       "estimated": "2026-01-28T00:25:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -2006,7 +2025,7 @@
       "destinationCode": "YVR",
       "scheduled": "2026-01-28T00:45:00Z",
       "estimated": "2026-01-28T00:45:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -2020,7 +2039,7 @@
       "destinationCode": "YEG",
       "scheduled": "2026-01-28T00:55:00Z",
       "estimated": "2026-01-28T00:55:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -2033,8 +2052,8 @@
       "destination": "Regina Int'l",
       "destinationCode": "YQR",
       "scheduled": "2026-01-28T01:00:00Z",
-      "estimated": "2026-01-28T01:00:00Z",
-      "status": "En Route",
+      "estimated": "2026-01-28T01:05:00Z",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     },
@@ -2048,7 +2067,7 @@
       "destinationCode": "MEX",
       "scheduled": "2026-01-28T01:27:00Z",
       "estimated": "2026-01-28T01:27:00Z",
-      "status": "En Route",
+      "status": "Scheduled",
       "terminal": null,
       "gate": null
     }
